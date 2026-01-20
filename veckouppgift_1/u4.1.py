@@ -4,7 +4,7 @@ avg_speed = float(avg_speed)
 # Set the distance
 km_to_stockholm: int = 470
 
-# Calculate the total travel time in minute
+# Calculate the total travel time in minutes
 travel_time_mins_total = (km_to_stockholm / avg_speed) * 60
 
 # Calculate the whole number of hours
