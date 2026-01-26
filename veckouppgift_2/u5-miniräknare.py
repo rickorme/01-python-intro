@@ -25,8 +25,6 @@ t3 = int(input("Please enter the third number: "))
 
 equal_count = 0
 middle_number = 0
-three_equal = False
-look_for_middle_number = True
 found_greatest_number = False
 t1_is_greatest = False
 t2_is_greatest = False
@@ -34,7 +32,6 @@ t3_is_greatest = False
 
 # If all three numbers equal we know the max and the middle
 if t1 == t2 == t3:
-    three_equal = True
     equal_count = 3
     greatest_number = t1
     middle_number = t1
@@ -42,18 +39,18 @@ if t1 == t2 == t3:
 
 # If 2 numbers are equal, there is no middle number, but we still need to find the max
 elif (t1 == t2) or (t1 == t3) or (t2 == t3):
-    look_for_middle_number = False
     equal_count = 2
 
 
 if not found_greatest_number:
+# either no numbers are equal or two numbers are equal
 
     # check if t1 is greatest
-    if t1 > (t2 + t3) /2:
+    if (t1 >= t2) and (t1 >= t3):
         greatest_number = t1
         t1_is_greatest = True
     # check if t2 is greatest
-    elif t2 > (t1 + t3)/2:
+    elif (t2 >= t1) and (t2 >= t3):
         greatest_number = t2
         t2_is_greatest = True
     # t3 must be greatest
@@ -62,7 +59,7 @@ if not found_greatest_number:
         t3_is_greatest = True
 
 
-if look_for_middle_number and not three_equal:
+if equal_count == 0:
 
     if t1_is_greatest:
         if t2 > t3:
@@ -85,7 +82,7 @@ result_msg = f"\nThe 3 numbers entered are {t1}, {t2} and {t3}."
 
 result_msg += f"\n{equal_count} numbers are equal."
 
-result_msg += build_phrase(look_for_middle_number, f"\nThe middle number is {middle_number}", "\nThere is no middle number")
+result_msg += build_phrase(equal_count != 2, f"\nThe middle number is {middle_number}", "\nThere is no middle number")
 
 result_msg += f"\nThe greatest number is {greatest_number}."
 
