@@ -1,21 +1,29 @@
-# This is a sample Python script.
+from exercise_functions import print_exercise_divider
+from veckouppgift_4.u2_funktioner_och_moduler import who_is_a_hacker, eko, eko2, my_multiplier, last, cut_edges, increase, average, pretty_print_list
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+print_exercise_divider(4, "2-2a")
+who_is_a_hacker('Rick')
 
+print_exercise_divider(4, "2-2b")
+eko("echo")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+print_exercise_divider(4, "2-2c")
+eko2("andon",9)
 
-def print_exercise_divider(exercise_name):
-    print("\n"*2)
-    print("-"*40)
-    print(f"-- Exercise {exercise_name}:")
-    print("-"*40,"\n")
+print_exercise_divider(4, "2-3")
+my_multiplier()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print_exercise_divider(4, "2-4")
+print(last([1, 2, 3]))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print_exercise_divider(4, "2-5")
+print(cut_edges([1,2,3,4]))
+
+print_exercise_divider(4, "2-6")
+print(increase(1))
+
+print_exercise_divider(4, "2-7")
+print(average(1,89))
+
+print_exercise_divider(4, "2-8")
+pretty_print_list(["a", "b", 3.14])

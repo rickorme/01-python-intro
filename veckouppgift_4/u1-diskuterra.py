@@ -1,10 +1,11 @@
-from main import print_exercise_divider
+from exercise_functions import print_exercise_divider
+
 # 1 Läsa och förstå kod - diskutera i grupp
 # Skriv ner vad du tror kommer skrivas ut. Skriv sedan in koden i din IDE, exakt som den står, och kör den. Fick du samma resultat som du trodde? Om inte, varför?
 #
 # 1a
 # This will print "test"
-print_exercise_divider("1a")
+print_exercise_divider(4, "1a")
 
 def foo(t):
     print("test")
@@ -13,7 +14,7 @@ foo("hej")
 
 # 1b
 #  This will print "3 5"
-print_exercise_divider("1b")
+print_exercise_divider(4, "1b")
 
 def fun1(x, y):
     return x * y
@@ -22,7 +23,7 @@ print(3, 5)
 
 # 1c
 # This will print 15
-print_exercise_divider("1c")
+print_exercise_divider(4, "1c")
 
 def fun1(x, y):
     return x * y
@@ -32,7 +33,7 @@ print(fun1(3, 5))
 # 1d
 # This will print 125
 
-print_exercise_divider("1d")
+print_exercise_divider(4, "1d")
 
 def fun2(i):
     return 5 * i
@@ -45,7 +46,7 @@ print(a)
 # 1e
 # This will print 7
 
-print_exercise_divider("1e")
+print_exercise_divider(4, "1e")
 
 a = 5
 def fun3(a):
@@ -57,7 +58,7 @@ print(a)
 # 1f
 # This will print 18
 # the function foo is passed as a parameter - not immediately run
-print_exercise_divider("1f")
+print_exercise_divider(4, "1f")
 
 def foo(i):
     return 2*i*i
@@ -73,7 +74,7 @@ print(a)
 # is_number returns True if x is either an int or a float, otherwise it returns False
 # It can be improved by passing a tuple with both datatypes we want to check
 # so that the check is completed in a single line
-print_exercise_divider("1g")
+print_exercise_divider(4, "1g")
 
 def is_number(x):
     if isinstance(x, (int, float)):
@@ -90,7 +91,7 @@ print(is_number("12"))
 
 # 1h
 # Should return ["how's", "going", "coding"]
-print_exercise_divider("1h")
+print_exercise_divider(4, "1h")
 
 def average_words(strings):
     found = []
@@ -108,7 +109,7 @@ print(found_words)
 # Lista ut vad som är funktionens syfte, baserad på namn och sammanhang.
 # Lista ut vad som ska vara det förväntade resultatet för de tre testlistorna.
 # Rätta felen, så funktionen gör det den ska.
-print_exercise_divider("1i")
+print_exercise_divider(4, "1i")
 # the purpose of the function is to accept a list of numbers, and return the smallest
 # run 1 -> -11
 # run 2 -> error
