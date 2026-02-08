@@ -328,6 +328,9 @@ def run_tests():
     play(hand)
 
 
-run_tests()
-# play()
+choice = input("Press T to run tests or Enter to play a hand: ")
+if choice.upper() == "T":
+    run_tests()
+else:
+    play()
 
