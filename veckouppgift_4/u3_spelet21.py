@@ -11,6 +11,7 @@ Gör så att datorn kan simulera en motståndare. Målet är att vinna över dat
 '''
 from exercise_functions import print_exercise_divider
 import random
+from time import sleep
 
 def deal_a_card(min_card_value, max_card_value):
     return random.randint(min_card_value, max_card_value)
@@ -64,7 +65,31 @@ def first_to_21_v3():
 
 
         print(f"Your total is  : {player_total}")
-        print(f"Dealer total is: {dealer_total}")
+        print(f"Dealer total is: {dealer_total}...")
+        sleep(2)
+        dealer_twist = False
+        # Dealer turn
+        while dealer_total <= 21:
+
+            dealer_twist = False
+            if dealer_total < 9:
+                dealer_twist = True
+            elif dealer_total < 15:
+                dealer_twist = random.choice([True,True,True,False])
+            elif dealer_total < 19:
+                dealer_twist = random.choice([True,False,False,False])
+
+            if dealer_twist:
+                print("Dealer decided to twist...")
+                next_card = deal_a_card(min_card_value, max_card_value)
+                print(f"They pulled a {next_card}")
+                dealer_total += next_card
+                print(f"Their new total is {dealer_total}")
+                sleep(3)
+            else:
+                print("Dealer decided to stick...")
+                sleep(2)
+                break
 
         if player_total > 21:
             print("You're bust! Dealer wins! 💩")
