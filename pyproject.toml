@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TAPHT25-Python"
+version = "0.1.0"
+description = "Exercises for python course"
+dependencies = [] 
+
+[tool.setuptools.packages.find]
+where = ["."]  # Look in the current directory
+include = ["*"] # Include all subfolders that are valid packages
